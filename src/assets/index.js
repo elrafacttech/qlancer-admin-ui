@@ -1,0 +1,1 @@
+export  { default as adminlogo } from "../assets/image/adminlogo.png"

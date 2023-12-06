@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "roboto-Medium";
+    src: local("roboto-Medium"),
+     url("./assets/fonts/Roboto-Medium.ttf") format("truetype");
+    /* font-weight: bold; */
+   }
+
+   @font-face {
+    font-family: "roboto-Regular";
+    src: local("roboto-Regular"),
+     url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+    /* font-weight: bold; */
+   }
+
+   
+
+   .font_Roboto_Medium {
+    font-family: "roboto-Medium" ;
+   }
+
+   .font_Roboto_Regular {
+    font-family: "roboto-Regular" ;
+   }
+
