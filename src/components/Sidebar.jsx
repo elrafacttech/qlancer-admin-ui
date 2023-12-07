@@ -26,7 +26,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className='w-[240px] bg-[#ffffff] h-[100vh] border border-gray-300 lgxl:block  slg:block hidden'>
+        <div className='w-[240px] bg-[#ffffff] h-[100vh] border border-gray-300 lgxl:block  slg:block hidden '>
             <div className='px-5 pt-2.5'>
                 <img className='w-52' src={adminlogo} alt="" />
 

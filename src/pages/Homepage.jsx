@@ -6,7 +6,7 @@ const Homepage = ({children}) => {
   const location = useLocation();
 
   return (
-    <div className='flex h-[130vh] '>
+    <div className='flex h-[130vh '>
       <div >
         <Sidebar />
       </div>

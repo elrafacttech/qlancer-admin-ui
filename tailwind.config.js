@@ -14,6 +14,7 @@ export default {
         slg: "960px",
         lg: "1024px",
         lgxl:"1140px",
+        lxl: "1200px",
         xl: "1280px",
       },
     },

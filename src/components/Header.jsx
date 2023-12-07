@@ -20,7 +20,7 @@ const Header = ({ data }) => {
 
   return (
     <>
-      <div className="flex justify-between h-16 shadow-md border border-b w-full px-3.5 font_Roboto_Regular">
+      <div className="flex justify-between h-16 shadow-md  border-b w-full px-3.5 font_Roboto_Regular fixed bg-[#ffffff]">
         
             <ul className="slg:flex hidden items-center lg:gap-8 gap-5 lg:text-base text-sm ">
                 <li >Admin Panel</li>

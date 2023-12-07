@@ -16,6 +16,20 @@
     /* font-weight: bold; */
    }
 
+   @font-face {
+    font-family: "roboto-Light";
+    src: local("roboto-Light"),
+     url("./assets/fonts/Roboto-Light.ttf") format("truetype");
+    /* font-weight: bold; */
+   }
+
+   @font-face {
+    font-family: "roboto-Thin";
+    src: local("roboto-Thin"),
+     url("./assets/fonts/Roboto-Thin.ttf") format("truetype");
+    /* font-weight: bold; */
+   }
+
    
 
    .font_Roboto_Medium {
@@ -24,5 +38,13 @@
 
    .font_Roboto_Regular {
     font-family: "roboto-Regular" ;
+   }
+
+   .font_Roboto_Light {
+    font-family: "roboto-Light" ;
+   }
+
+   .font_Roboto_Thin {
+    font-family: "roboto-Thin" ;
    }
 
