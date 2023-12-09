@@ -30,6 +30,13 @@
     /* font-weight: bold; */
    }
 
+   @font-face {
+    font-family: "HelveticaNeue";
+    src: local("HelveticaNeue"),
+     url("./assets/fonts/HelveticaNeueRegular.otf") format("truetype");
+    /* font-weight: bold; */
+   }
+
    
 
    .font_Roboto_Medium {
@@ -47,4 +54,20 @@
    .font_Roboto_Thin {
     font-family: "roboto-Thin" ;
    }
+
+   .font_HelveticaNeue {
+    font-family: "HelveticaNeue" ;
+   }
+
+   @layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+}
 

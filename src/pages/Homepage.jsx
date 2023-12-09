@@ -6,11 +6,11 @@ const Homepage = ({children}) => {
   const location = useLocation();
 
   return (
-    <div className='flex h-[130vh '>
+    <div className='flex h-[130v '>
       <div >
         <Sidebar />
       </div>
-      <div className='w-full'>
+      <div className='w-full  lgxl:pl-60'>
         {
           (location.pathname === "/dashboard") ? (
             <>
@@ -18,8 +18,18 @@ const Homepage = ({children}) => {
             </>
           )
             :
+            (location.pathname === "/gig-category") ? (
+              <>
+                {children}
+              </>
+            ):
+            (location.pathname === "/gig-custom-fields") ? (
+              <>
+              {children}
+              </>
+            ):
             <>
-             {/* {children} */}
+            
             </>
         }
       </div>

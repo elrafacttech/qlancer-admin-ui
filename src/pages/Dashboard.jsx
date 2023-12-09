@@ -136,7 +136,7 @@ const Dashboard = () => {
     return (
         <Homepage>
             <Header />
-            <div className='px-[15px] pt-[81px] bg-[#f9f9f9] h-[100vh] overflow-y-scroll overflow-hidden'>
+            <div className='px-[15px]  pt-[88px] bg-[#f9f9f9] h-[100vh   overflow-y-scroll overflow-hidden no-scrollbar pb-[49px]'>
 
                 <div className='flex flex-col'>
                     <div className='flex md:flex-row flex-col gap-[30px]'>
@@ -226,11 +226,11 @@ const Dashboard = () => {
                     <div className='shadow shadow-slate-300  lg:w-[32%] w-full h-[347px]  p-5 rounded-[3px] overflow-hidden'>
                         <p className='text-[#434343] font_Roboto_Medium text-lg'>Weekly users</p>
                         <div >
-                             <Bar data={data} options={options} 
-                        // style={{ height: '230px', }} 
-                        />
+                            <Bar data={data} options={options}
+                            // style={{ height: '230px', }} 
+                            />
                         </div>
-                       
+
                     </div>
                 </div>
 
@@ -288,7 +288,6 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-
                     <div className='w-full h-full shadow p-5'>
                         <p className='text-[#434343] font_Roboto_Medium text-lg'>Recent Jobs</p>
                         <div className='flex flex-col gap-5'>
@@ -345,6 +344,192 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className='pt-6 flex md:flex-row flex-col gap-[31px] '>
+                    <div className='w-full h-full shadow p-5 bg-[#ffffff]'>
+                        <p className='text-[#434343] font_Roboto_Medium text-lg'>Recent Registered</p>
+                        <div className="relative overflow-x-auto pt-12">
+                            <table className="w-full text-left text-sm  rtl:text-right ">
+                                <thead className=" text-base   border-b border-gray-300">
+                                    <tr className='font_Roboto_Light'>
+                                        <th scope="col" className="px-6 py-3">Name</th>
+                                        <th scope="col" className="px-6 py-3">Type</th>
+                                        <th scope="col" className="px-6 py-3">Email</th>
+                                        <th scope="col" className="px-6 py-3">Status</th>
+                                        <th scope="col" className="px-6 py-3">Posted Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="border-b font_Roboto_Thin text-base h-20">
+                                        <th scope="row" className=" px-6  flex flex-col  h-full pt-4 gap-0.5">Caio Augusto <span className='text-[#7dc855] text-xs'>@ CaioDoc</span></th>
+                                        <td className="px-6 py-4 font_Roboto_Light text-base">Freelancer</td>
+                                        <td className=" py-4  ">
+                                            <div className=' px-4 text-white text-xs font_Roboto_Medium flex items-center'>
+                                                <div className='bg-[#5bc0de]  h-6 px-5  rounded-3xl flex items-center'>
+                                                    caio.augusto.doc@gmail.com
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className='bg-[#5bc0de] w-[70px] h-5 rounded-3xl px-4 text-white text-xs font_Roboto_Medium flex items-center justify-center'>
+                                                ACTIVE
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 font_Roboto_Light">
+                                            7 hours ago
+                                        </td>
+                                    </tr>
+                                    <tr className="border-b font_Roboto_Thin text-base h-20">
+                                        <th scope="row" className=" px-6  flex flex-col  h-full pt-4 gap-0.5">Caio Augusto <span className='text-[#7dc855] text-xs'>@ CaioDoc</span></th>
+                                        <td className="px-6 py-4 font_Roboto_Light text-base">Freelancer</td>
+                                        <td className=" py-4  ">
+                                            <div className=' px-4 text-white text-xs font_Roboto_Medium flex items-center'>
+                                                <div className='bg-[#5bc0de]  h-6 px-5  rounded-3xl flex items-center'>
+                                                    caio.augusto.doc@gmail.com
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className='bg-[#5bc0de] w-[70px] h-5 rounded-3xl px-4 text-white text-xs font_Roboto_Medium flex items-center justify-center'>
+                                                ACTIVE
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 font_Roboto_Light">
+                                            7 hours ago
+                                        </td>
+                                    </tr>
+
+                                    <tr className="border-b font_Roboto_Thin text-base h-20">
+                                        <th scope="row" className=" px-6  flex flex-col  h-full pt-4 gap-0.5">Caio Augusto <span className='text-[#7dc855] text-xs'>@ CaioDoc</span></th>
+                                        <td className="px-6 py-4 font_Roboto_Light text-base">Freelancer</td>
+                                        <td className=" py-4  ">
+                                            <div className=' px-4 text-white text-xs font_Roboto_Medium flex items-center'>
+                                                <div className='bg-[#5bc0de]  h-6 px-5  rounded-3xl flex items-center'>
+                                                    caio.augusto.doc@gmail.com
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className='bg-[#5bc0de] w-[70px] h-5 rounded-3xl px-4 text-white text-xs font_Roboto_Medium flex items-center justify-center'>
+                                                ACTIVE
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 font_Roboto_Light">
+                                            7 hours ago
+                                        </td>
+                                    </tr>
+
+                                    <tr className="border-b font_Roboto_Thin text-base h-20">
+                                        <th scope="row" className=" px-6  flex flex-col  h-full pt-4 gap-0.5">Caio Augusto <span className='text-[#7dc855] text-xs'>@ CaioDoc</span></th>
+                                        <td className="px-6 py-4 font_Roboto_Light text-base">Freelancer</td>
+                                        <td className=" py-4  ">
+                                            <div className=' px-4 text-white text-xs font_Roboto_Medium flex items-center'>
+                                                <div className='bg-[#5bc0de]  h-6 px-5  rounded-3xl flex items-center'>
+                                                    caio.augusto.doc@gmail.com
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className='bg-[#5bc0de] w-[70px] h-5 rounded-3xl px-4 text-white text-xs font_Roboto_Medium flex items-center justify-center'>
+                                                ACTIVE
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 font_Roboto_Light">
+                                            7 hours ago
+                                        </td>
+                                    </tr>
+
+                                    <tr className="border-b font_Roboto_Thin text-base h-20">
+                                        <th scope="row" className=" px-6  flex flex-col  h-full pt-4 gap-0.5">Caio Augusto <span className='text-[#7dc855] text-xs'>@ CaioDoc</span></th>
+                                        <td className="px-6 py-4 font_Roboto_Light text-base">Freelancer</td>
+                                        <td className=" py-4  ">
+                                            <div className=' px-4 text-white text-xs font_Roboto_Medium flex items-center'>
+                                                <div className='bg-[#5bc0de]  h-6 px-5  rounded-3xl flex items-center'>
+                                                    caio.augusto.doc@gmail.com
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className='bg-[#5bc0de] w-[70px] h-5 rounded-3xl px-4 text-white text-xs font_Roboto_Medium flex items-center justify-center'>
+                                                ACTIVE
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 font_Roboto_Light">
+                                            7 hours ago
+                                        </td>
+                                    </tr>
+
+                                    <tr className="border-b font_Roboto_Thin text-base h-20">
+                                        <th scope="row" className=" px-6  flex flex-col  h-full pt-4 gap-0.5">Caio Augusto <span className='text-[#7dc855] text-xs'>@ CaioDoc</span></th>
+                                        <td className="px-6 py-4 font_Roboto_Light text-base">Freelancer</td>
+                                        <td className=" py-4  ">
+                                            <div className=' px-4 text-white text-xs font_Roboto_Medium flex items-center'>
+                                                <div className='bg-[#5bc0de]  h-6 px-5  rounded-3xl flex items-center'>
+                                                    caio.augusto.doc@gmail.com
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className='bg-[#5bc0de] w-[70px] h-5 rounded-3xl px-4 text-white text-xs font_Roboto_Medium flex items-center justify-center'>
+                                                ACTIVE
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 font_Roboto_Light">
+                                            7 hours ago
+                                        </td>
+                                    </tr>
+
+                                    <tr className="border-b font_Roboto_Thin text-base h-20">
+                                        <th scope="row" className=" px-6  flex flex-col  h-full pt-4 gap-0.5">Caio Augusto <span className='text-[#7dc855] text-xs'>@ CaioDoc</span></th>
+                                        <td className="px-6 py-4 font_Roboto_Light text-base">Freelancer</td>
+                                        <td className=" py-4  ">
+                                            <div className=' px-4 text-white text-xs font_Roboto_Medium flex items-center'>
+                                                <div className='bg-[#5bc0de]  h-6 px-5  rounded-3xl flex items-center'>
+                                                    caio.augusto.doc@gmail.com
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className='bg-[#5bc0de] w-[70px] h-5 rounded-3xl px-4 text-white text-xs font_Roboto_Medium flex items-center justify-center'>
+                                                ACTIVE
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 font_Roboto_Light">
+                                            7 hours ago
+                                        </td>
+                                    </tr>
+
+                                    <tr className="border- font_Roboto_Thin text-base h-20">
+                                        <th scope="row" className=" px-6  flex flex-col  h-full pt-4 gap-0.5">Caio Augusto <span className='text-[#7dc855] text-xs'>@ CaioDoc</span></th>
+                                        <td className="px-6 py-4 font_Roboto_Light text-base">Freelancer</td>
+                                        <td className=" py-4  ">
+                                            <div className=' px-4 text-white text-xs font_Roboto_Medium flex items-center'>
+                                                <div className='bg-[#5bc0de]  h-6 px-5  rounded-3xl flex items-center'>
+                                                    caio.augusto.doc@gmail.com
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className='bg-[#5bc0de] w-[70px] h-5 rounded-3xl px-4 text-white text-xs font_Roboto_Medium flex items-center justify-center'>
+                                                ACTIVE
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 font_Roboto_Light">
+                                            7 hours ago
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p className='text-[#7dc855] px-2 font_Roboto_Regular pt-6'>
+                                Check all Users
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
 
 
             </div>

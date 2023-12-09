@@ -20,8 +20,7 @@ const Header = ({ data }) => {
 
   return (
     <>
-      <div className="flex justify-between h-16 shadow-md  border-b w-full px-3.5 font_Roboto_Regular fixed bg-[#ffffff]">
-        
+      <div className="flex justify-between h-16 shadow-sm  border-b w-ful px-3.5 font_Roboto_Regular fixe right-0 lgxl:w-[calc(100vw-237px)  w-full  bg-[#ffffff] z-50  ">
             <ul className="slg:flex hidden items-center lg:gap-8 gap-5 lg:text-base text-sm ">
                 <li >Admin Panel</li>
                 <li className="text-[#767676]">Support</li>
@@ -33,7 +32,7 @@ const Header = ({ data }) => {
                 <li><RxHamburgerMenu  size={26} /></li>
             </ul>
 
-            <ul className="flex items-center gap-5 pr-3 lg:text-base text-sm">
+            <ul className="flex items-center gap-5 pr-4 lg:text-base text-sm">
                 <li><CgLayoutGridSmall className="text-[#6d6d6d]" size={35} /></li>
 
                 <li className="flex gap-3 text-[#767676]">
