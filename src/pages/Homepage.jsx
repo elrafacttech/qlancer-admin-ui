@@ -2,7 +2,7 @@ import React from 'react'
 import Sidebar from '../components/Sidebar'
 import { useLocation } from 'react-router-dom';
 
-const Homepage = ({children}) => {
+const Homepage = ({ children }) => {
   const location = useLocation();
 
   return (
@@ -22,15 +22,31 @@ const Homepage = ({children}) => {
               <>
                 {children}
               </>
-            ):
-            (location.pathname === "/gig-custom-fields") ? (
-              <>
-              {children}
-              </>
-            ):
-            <>
-            
-            </>
+            ) :
+              (location.pathname === "/gig-custom-fields") ? (
+                <>
+                  {children}
+                </>
+              ) :
+                (location.pathname === "/gig-service") ? (
+                  <>
+                    {children}
+                  </>
+                ) :
+                  (location.pathname === "/orders") ? (
+                    <>
+                     {children}
+                    </>
+                  ) :
+                  
+                  (location.pathname === "/projects") ? (
+                  <>
+                   {children}
+                  </>
+                  ):
+                    <>
+
+                    </>
         }
       </div>
     </div>

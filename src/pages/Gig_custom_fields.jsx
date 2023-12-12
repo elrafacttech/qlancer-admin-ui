@@ -9,8 +9,8 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 const Gig_custom_fields = () => {
     return (
         <Homepage>
-            {/* <Header /> */}
-            <div className='px-[15px] pt-6  h-[100vh bg-[#f9f9f9] h-[100vh overflow-y-scroll overflow-hidden no-scrollbar '>
+            <Header />
+            <div className='px-[15px] pt-6  h- bg-[#f9f9f9] h-[100vh overflow-y-scroll overflow-hidden no-scrollbar '>
                 <div className='w-full h-full shadow p-5 bg-[#ffffff] rounded-sm px-6 '>
                     <p className='text-[#434343] font_Roboto_Medium text-lg'>Custom Fields</p>
 

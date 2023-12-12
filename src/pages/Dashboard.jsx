@@ -121,9 +121,6 @@ const Dashboard = () => {
         },
     });
 
-
-
-
     ChartJS.register(
         CategoryScale,
         LinearScale,
@@ -142,7 +139,9 @@ const Dashboard = () => {
                     <div className='flex md:flex-row flex-col gap-[30px]'>
                         <div className='flex xl:flex-row flex-col w-full gap-[30px]'>
                             <div className='w-full h-[101px] shadow rounded-[3px] bg-[#ffffff] flex items-center justify-between px-6'>
-                                <div className='rounded-full h-12 w-12 bg-[#358ed7] flex items-center justify-center text-white text-2xl'><IoMdNotifications /></div>
+                                <div className='rounded-full h-12 w-12 bg-[#358ed7] flex items-center justify-center text-white text-2xl'>
+                                    <IoMdNotifications />
+                                </div>
                                 <div className='flex flex-col '>
                                     <p className='text-[#8d9ea7] font_Roboto_Medium text-sm'>Open Projects</p>
                                     <p className='text-[#358ed7] font_Roboto_Light font-semibo text-[26px]'>131</p>
