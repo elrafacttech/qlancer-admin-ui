@@ -8,6 +8,9 @@ import Gig_service from "./pages/Gig_service"
 import Orders from "./pages/Orders"
 
 import Projects from "./pages/Projects"
+import Jobs from "./pages/Jobs"
+import Companies from "./pages/Companies"
+import JobTypes from "./pages/JobTypes"
 
 
 function App() {
@@ -20,9 +23,12 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/gig-category' element={<Gig_Category />} />
         <Route path='/gig-custom-fields' element={<Gig_custom_fields />} />
-        <Route path='/gig-service' element={<Gig_service />} />
+        <Route path='/gig-service/active' element={<Gig_service />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/jobs/active-jobs' element={<Jobs />} />
+        <Route path='/companies' element={<Companies />} />
+        <Route path='/jobtypes' element={<JobTypes />} />
         
       </Routes>
     </>

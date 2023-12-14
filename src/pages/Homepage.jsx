@@ -28,25 +28,37 @@ const Homepage = ({ children }) => {
                   {children}
                 </>
               ) :
-                (location.pathname === "/gig-service") ? (
+                (location.pathname === "/gig-service/active") ? (
                   <>
                     {children}
                   </>
                 ) :
                   (location.pathname === "/orders") ? (
                     <>
-                     {children}
+                      {children}
                     </>
                   ) :
-                  
-                  (location.pathname === "/projects") ? (
-                  <>
-                   {children}
-                  </>
-                  ):
-                    <>
 
-                    </>
+                    (location.pathname === "/projects") ? (
+                      <>
+                        {children}
+                      </>
+                    ) : (location.pathname === "/jobs/active-jobs") ? (
+                      <>
+                        {children}
+                      </>
+                    ) : (location.pathname === "/companies") ? (
+                      <>
+                        {children}
+                      </>
+                    ) : (location.pathname === "/jobtypes") ? (
+                      <>
+                        {children}
+                      </>
+                    ) :
+                      <>
+
+                      </>
         }
       </div>
     </div>

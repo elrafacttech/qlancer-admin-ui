@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { HiHome, HiOutlineCurrencyDollar, HiOutlineHome, HiOutlineNewspaper, HiOutlinePaperClip } from "react-icons/hi2";
 import { FaUserCircle } from "react-icons/fa";
@@ -20,6 +20,7 @@ import { TbCurrencyDollar } from "react-icons/tb";
 
 const Sidebar = () => {
     const [serviceDropDown, setServiceDropDown] = useState(false)
+    const [jobDropdown, setJobsDropdown] = useState(false)
     const navigate = useNavigate()
     const location = useLocation();
     const [links, setLinks] = useState([
@@ -31,6 +32,25 @@ const Sidebar = () => {
         { to: "/rate", icon: <HiOutlineCurrencyDollar className='z-20' size={25} />, text: 'Rate' },
     ]);
 
+
+    const handleService = () => {
+        if (serviceDropDown === false) {
+            setServiceDropDown(true)
+        } else {
+            setServiceDropDown(false)
+        }
+
+    }
+
+    const handleJobs = () => {
+        if (jobDropdown === false) {
+            setJobsDropdown(true)
+        } else {
+            setJobsDropdown(false)
+        }
+    }
+
+    console.log("serviceDropDown", serviceDropDown);
 
 
     return (
@@ -84,35 +104,25 @@ const Sidebar = () => {
                             </div>
                         </Link>
 
-                        <Link to="/gig-service">
-                            <div >
-                                <div>
-                                    <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group' onClick={() => setServiceDropDown(!serviceDropDown)}>
-                                        <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
-                                        <div className='flex justify-between items-center w-full'>
-                                            <div className='flex items-center  gap-4 z-50'>
-                                                <PiToolboxFill className='text-[#000000]' />
-                                                <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Gig Services</p>
-                                            </div>
-                                            <div className='text-[10px] z-50'>
-                                                {
-                                                    !serviceDropDown ? <TfiPlus /> : <TfiMinus />
-                                                }
-
-                                            </div>
-                                        </div>
-
-                                    </div>
+                        <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group ' >
+                            <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
+                            <div className='flex justify-between items-center w-full' onClick={handleService}>
+                                <div className='flex items-center  gap-4 z-50'>
+                                    <PiToolboxFill className='text-[#000000]' />
+                                    <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Gig Services</p>
+                                </div>
+                                <div className='text-[10px] z-50'>
+                                    {
+                                        !serviceDropDown ? <TfiPlus /> : <TfiMinus />
+                                    }
                                 </div>
                             </div>
-                        </Link>
-
+                        </div>
                         {serviceDropDown ?
                             <div className={`flex gap-6 flex-col pl-8  ${serviceDropDown ? "transition duration-150 ease-in-out pt-6 " : ""}`}>
-
-                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium '>Active</p>
-
-
+                                <Link to="/gig-service/active">
+                                    <p className=' text-[13px] text-[#909090] font_Roboto_Medium '>Active</p>
+                                </Link>
                                 <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Pending for approval</p>
                                 <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>All Gigs List</p>
                             </div>
@@ -142,10 +152,6 @@ const Sidebar = () => {
                         </Link>
                     </div>
 
-
-
-
-
                     <div className='pt-7 flex flex-col gap-1.5'>
                         <Link to="/projects">
                             <div>
@@ -169,51 +175,75 @@ const Sidebar = () => {
                     </div>
 
                     <div className='pt-7 flex flex-col gap-1.5'>
-                        <Link to="/gig-category">
+
+                        <div>
+                            <p className='text-[#cccccc]  text-[11px]  tracking-wider font_Roboto_Medium'>MANAGE JOBS</p>
+
+                            <div className=''>
+                                <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group ' onClick={handleJobs}>
+                                    <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
+                                    <div className='flex justify-between items-center w-full'>
+                                        <div className='flex items-center  gap-4 z-50 '>
+                                            <PiToolboxFill className='text-[#000000]' />
+                                            <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Jobs</p>
+                                        </div>
+                                        <div className='text-[10px] z-50'>
+                                            <TfiPlus />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {jobDropdown ?
+                            <div className={`flex gap-6 flex-col pl-8  ${jobDropdown ? "transition duration-150 ease-in-out pt-6 " : ""}`}>
+                                <Link to="/jobs/active-jobs">
+                                    <p className=' text-[13px] text-[#909090] font_Roboto_Medium '>Active Jobs</p>
+                                </Link>
+
+                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Pending Jobs</p>
+                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Hidden by User</p>
+                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Resubmitted Jobs</p>
+                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Hidden by User</p>
+                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Expire Jobs</p>
+                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>All Jobs List</p>
+                            </div>
+                            :
+                            <>
+
+                            </>
+                        }
+
+
+                        <Link to="/companies">
                             <div>
-                                <p className='text-[#cccccc]  text-[11px]  tracking-wider font_Roboto_Medium'>MANAGE JOBS</p>
                                 <div>
-                                    <div>
-                                        <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
-                                            <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
-                                            <div className='flex justify-between items-center w-full'>
-                                                <div className='flex items-center  gap-4 z-50'>
-                                                    <PiToolboxFill className='text-[#000000]' />
-                                                    <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Jobs</p>
-                                                </div>
-                                                <div className='text-[10px] z-50'>
-                                                    <TfiPlus />
-                                                </div>
-                                            </div>
+                                    <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
+                                        <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
+                                        <div className='flex items-center  gap-4 z-50'>
+                                            <GiSoccerField className='text-[#000000]' />
+                                            <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Companies</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </Link>
 
-                        <div>
+                        <Link to="/jobtypes">
                             <div>
-                                <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
-                                    <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
-                                    <div className='flex items-center  gap-4 z-50'>
-                                        <GiSoccerField className='text-[#000000]' />
-                                        <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Companies</p>
+                                <div>
+                                    <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
+                                        <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
+                                        <div className='flex items-center  gap-4 z-50'>
+                                            <PiToolboxFill className='text-[#000000]' />
+                                            <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Job Types</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
 
-                        <div>
-                            <div>
-                                <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
-                                    <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
-                                    <div className='flex items-center  gap-4 z-50'>
-                                        <PiToolboxFill className='text-[#000000]' />
-                                        <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Job Types</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <div>
                             <div>
@@ -477,7 +507,7 @@ const Sidebar = () => {
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 
