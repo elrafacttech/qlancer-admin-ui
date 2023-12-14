@@ -55,7 +55,23 @@ const Homepage = ({ children }) => {
                       <>
                         {children}
                       </>
-                    ) :
+                    ) : 
+                    (location.pathname === "/salary-type") ? (
+                      <>
+                        {children}
+                      </>
+                    ): 
+                    (location.pathname === "/resume") ? (
+                      <>
+                        {children}
+                      </>
+                    ):
+
+                    (location.pathname === "/category") ? (
+                      <>
+                        {children}
+                      </>
+                    ):
                       <>
 
                       </>

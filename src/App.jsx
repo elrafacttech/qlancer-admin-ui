@@ -11,6 +11,9 @@ import Projects from "./pages/Projects"
 import Jobs from "./pages/Jobs"
 import Companies from "./pages/Companies"
 import JobTypes from "./pages/JobTypes"
+import SalaryTypes from "./pages/SalaryTypes"
+import Resume from "./pages/Resume"
+import Category from "./pages/Category"
 
 
 function App() {
@@ -29,7 +32,12 @@ function App() {
         <Route path='/jobs/active-jobs' element={<Jobs />} />
         <Route path='/companies' element={<Companies />} />
         <Route path='/jobtypes' element={<JobTypes />} />
+        <Route path='/salary-type' element={<SalaryTypes />} />
+        <Route path='/resume' element={<Resume />} />
+        <Route path='/category' element={<Category />} />
         
+
+
       </Routes>
     </>
   )

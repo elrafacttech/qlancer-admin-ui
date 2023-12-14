@@ -14,7 +14,7 @@ const JobTypes = () => {
                 <div className='w-full h-full shadow p-5 bg-[#ffffff] rounded-sm px-6 pt-6'>
                     <div className='border w-full h-full p-6 rounded pt-6'>
                         <div className='flex justify-between items-center'>
-                            <p className='text-[#434343] font_Roboto_Regular text-lg'>All Job Types</p>
+                            <p className='text-[#434343] font_Roboto_Regular text-lg'>All Salary Types</p>
                             <div className='px-3 h-[37px] bg-[#5cb85c] rounded-[3px] flex justify-center items-center text-white font_Roboto_Regular'> <FaPlus /> Add New</div>
                         </div>
 

@@ -52,6 +52,10 @@ const Sidebar = () => {
 
     console.log("serviceDropDown", serviceDropDown);
 
+    useEffect(() => {
+        console.log("JHVJHVJHVJGHvJVJGvgvgv");
+    }, [])
+
 
     return (
         <div className='w-[240px] bg-[#ffffff] h-[100vh] border border-r border-[#f0f0f0] lgxl:block   hidden  fixed overflow-hidden overflow-y-scroll no-scrollbar '>
@@ -244,50 +248,53 @@ const Sidebar = () => {
                             </div>
                         </Link>
 
-
-                        <div>
+                        <Link to="/salary-type">
                             <div>
-                                <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
-                                    <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
-                                    <div className='flex items-center  gap-4 z-50'>
-                                        <TbCurrencyDollar className='text-[#000000]' />
-                                        <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Salary Types</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
-                                    <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
-                                    <div className='flex items-center  gap-4 z-50'>
-                                        <HiOutlinePaperClip className='text-[#000000] rotate-90' />
-                                        <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Resume</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*  */}
-
-                    <div className='pt-7 flex flex-col gap-1.5'>
-                        <Link to="/gig-category">
-                            <div>
-                                <p className='text-[#cccccc]  text-[11px]  tracking-wider font_Roboto_Medium'>MANAGEMENT</p>
                                 <div>
-                                    <div>
-                                        <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
-                                            <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
-                                            <div className='flex items-center  gap-4 z-50'>
-                                                <HiOutlineNewspaper className='text-[#000000]' />
-                                                <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Category</p>
-                                            </div>
+                                    <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
+                                        <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
+                                        <div className='flex items-center  gap-4 z-50'>
+                                            <TbCurrencyDollar className='text-[#000000]' />
+                                            <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Salary Types</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </Link>
+
+
+                        <Link to="/resume">
+
+
+                            <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
+                                <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
+                                <div className='flex items-center  gap-4 z-50'>
+                                    <HiOutlinePaperClip className='text-[#000000] rotate-90' />
+                                    <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Resume</p>
+                                </div>
+                            </div>
+                        </Link>
+
+                    </div>
+                    {/*  */}
+
+                    <div className='pt-7 flex flex-col gap-1.5'>
+
+                        <div>
+                            <p className='text-[#cccccc]  text-[11px]  tracking-wider font_Roboto_Medium'>MANAGEMENT</p>
+                            <Link to="/category">
+                                <div>
+                                    <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
+                                        <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
+                                        <div className='flex items-center  gap-4 z-50'>
+                                            <HiOutlineNewspaper className='text-[#000000]' />
+                                            <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Category</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+
+                        </div>
 
                         <div>
                             <div>
