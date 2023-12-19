@@ -55,26 +55,38 @@ const Homepage = ({ children }) => {
                       <>
                         {children}
                       </>
-                    ) : 
-                    (location.pathname === "/salary-type") ? (
-                      <>
-                        {children}
-                      </>
-                    ): 
-                    (location.pathname === "/resume") ? (
-                      <>
-                        {children}
-                      </>
-                    ):
+                    ) :
+                      (location.pathname === "/salary-type") ? (
+                        <>
+                          {children}
+                        </>
+                      ) :
+                        (location.pathname === "/resume") ? (
+                          <>
+                            {children}
+                          </>
+                        ) :
 
-                    (location.pathname === "/category") ? (
-                      <>
-                        {children}
-                      </>
-                    ):
-                      <>
+                          (location.pathname === "/category") ? (
+                            <>
+                              {children}
+                            </>
+                          ) : (location.pathname === "/custom-field") ? (
+                            <>
+                              {children}
+                            </>
+                          ) : (location.pathname === "/membership_plans") ? (
+                            <>
+                              {children}
+                            </>
+                          ) : (location.pathname === "/membership_custom_settings") ? (
+                            <>
+                              {children}
+                            </>
+                          ) :
+                            <>
 
-                      </>
+                            </>
         }
       </div>
     </div>

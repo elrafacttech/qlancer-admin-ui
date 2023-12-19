@@ -43,8 +43,6 @@ const Header = ({ data }) => {
                     <img className="h-12 w-12 rounded-full object-cover" src={user} alt="" />
                 </li> */}
             </ul>
-        
-       
       </div>
 
     </>

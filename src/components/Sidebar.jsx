@@ -21,6 +21,7 @@ import { TbCurrencyDollar } from "react-icons/tb";
 const Sidebar = () => {
     const [serviceDropDown, setServiceDropDown] = useState(false)
     const [jobDropdown, setJobsDropdown] = useState(false)
+    const [membershipDropdown, setMembershipDropdown] = useState(false)
     const navigate = useNavigate()
     const location = useLocation();
     const [links, setLinks] = useState([
@@ -47,6 +48,14 @@ const Sidebar = () => {
             setJobsDropdown(true)
         } else {
             setJobsDropdown(false)
+        }
+    }
+
+    const handleMembership = () => {
+        if (membershipDropdown === false) {
+            setMembershipDropdown(true)
+        } else {
+            setMembershipDropdown(false)
         }
     }
 
@@ -179,7 +188,6 @@ const Sidebar = () => {
                     </div>
 
                     <div className='pt-7 flex flex-col gap-1.5'>
-
                         <div>
                             <p className='text-[#cccccc]  text-[11px]  tracking-wider font_Roboto_Medium'>MANAGE JOBS</p>
 
@@ -197,7 +205,6 @@ const Sidebar = () => {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         {jobDropdown ?
@@ -218,7 +225,6 @@ const Sidebar = () => {
 
                             </>
                         }
-
 
                         <Link to="/companies">
                             <div>
@@ -296,7 +302,7 @@ const Sidebar = () => {
 
                         </div>
 
-                        <div>
+                        <Link to="/custom-field">
                             <div>
                                 <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
                                     <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
@@ -306,7 +312,8 @@ const Sidebar = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
+
 
                         {/* <div>
                             <div>
@@ -319,7 +326,10 @@ const Sidebar = () => {
                                 </div>
                             </div>
                         </div> */}
-                        <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group'>
+
+
+                        {/* <Link to="/membership_plans"> */}
+                        <div className='flex items-center  gap-4 pt-5 cursor-pointer relative group' onClick={handleMembership}>
                             <div className='absolute group-hover:bg-[#fafafa] h-10 w-[238px] -left-6 duration-150 '></div>
                             <div className='flex justify-between items-center w-full'>
                                 <div className='flex items-center  gap-4 z-50'>
@@ -327,10 +337,31 @@ const Sidebar = () => {
                                     <p className=' text-[13px] text-[#434343] font_Roboto_Medium'>Membership</p>
                                 </div>
                                 <div className='text-[10px] z-50'>
-                                    <TfiPlus />
+                                    {
+                                        !membershipDropdown ? <TfiPlus /> : <TfiMinus />
+                                    }
                                 </div>
                             </div>
                         </div>
+                        {/* </Link> */}
+                        {membershipDropdown ?
+                            <div className={`flex gap-6 flex-col pl-8  ${membershipDropdown ? "transition duration-150 ease-in-out pt-6 " : ""}`}>
+                                <Link to="/membership_plans">
+                                    <p className=' text-[13px] text-[#909090] font_Roboto_Medium '>Plans</p>
+                                </Link>
+                                <Link to="/membership_custom_settings">
+                                    <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Custom Settings</p>
+                                </Link>
+
+                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Upgrades</p>
+                                <p className=' text-[13px] text-[#909090] font_Roboto_Medium'>Cron Logs</p>
+                            </div>
+                            :
+                            <>
+
+                            </>
+                        }
+
 
                         <div>
                             <div>
@@ -504,12 +535,6 @@ const Sidebar = () => {
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
 
                 </div>
             </div>

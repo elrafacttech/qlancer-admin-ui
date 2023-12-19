@@ -171,12 +171,12 @@ const Category = () => {
                                         {
                                             show ?
                                                 <>
-                                                    <motion.div 
-                                                       initial={{ opacity: 0, height: 0 }}
-                                                       animate={{ opacity: 1, height: 'auto' }}
-                                                       exit={{ opacity: 0, height: 0 }}
-                                                       transition={{ duration: 0.3 }}
-                                                    className='w-full border h-full rounded duration-700' >
+                                                    <motion.div
+                                                        initial={{ opacity: 0, height: 0 }}
+                                                        animate={{ opacity: 1, height: 'auto' }}
+                                                        exit={{ opacity: 0, height: 0 }}
+                                                        transition={{ duration: 0.3 }}
+                                                        className='w-full border h-full rounded duration-700' >
                                                         <div className='p-4  '>
                                                             <div className='flex w-full gap-5'>
                                                                 <div className='w-full '>

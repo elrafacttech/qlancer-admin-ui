@@ -14,6 +14,9 @@ import JobTypes from "./pages/JobTypes"
 import SalaryTypes from "./pages/SalaryTypes"
 import Resume from "./pages/Resume"
 import Category from "./pages/Category"
+import CustomFields from "./pages/CustomFields"
+import Membership from "./pages/Membership"
+import CustomSettings from "./components/membership/CustomSettings"
 
 
 function App() {
@@ -35,8 +38,11 @@ function App() {
         <Route path='/salary-type' element={<SalaryTypes />} />
         <Route path='/resume' element={<Resume />} />
         <Route path='/category' element={<Category />} />
+        <Route path='/custom-field' element={<CustomFields />} />
+        <Route path='/membership_plans'  element={<Membership />} />
+        <Route path='/membership_custom_settings' element={<CustomSettings />} />
         
-
+        
 
       </Routes>
     </>
