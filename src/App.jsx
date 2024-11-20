@@ -41,9 +41,6 @@ function App() {
         <Route path='/custom-field' element={<CustomFields />} />
         <Route path='/membership_plans'  element={<Membership />} />
         <Route path='/membership_custom_settings' element={<CustomSettings />} />
-        
-        
-
       </Routes>
     </>
   )
